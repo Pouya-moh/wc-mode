@@ -59,12 +59,12 @@
        mode-line-position
        '((wc-mode
 	  (6 (:eval (if (use-region-p)
-			(format " %d,%d,%d"
+			(format " |c:%d|w:%d|l:%d|"
 				(abs (- (point) (mark)))
 				(count-words-region (point) (mark))
 				(abs (- (line-number-at-pos (point))
 					(line-number-at-pos (mark)))))
-		      (format " %d,%d,%d"
+		      (format " |c:%d|w:%d|l:%d|"
 			      (- (point-max) (point-min))
 			      (count-words-region (point-min) (point-max))
 			      (line-number-at-pos (point-max))))))
